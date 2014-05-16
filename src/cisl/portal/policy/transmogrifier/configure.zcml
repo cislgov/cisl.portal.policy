@@ -10,6 +10,12 @@
         name="cisl.sections.refactor"
         />
 
+    <!-- Register workflow refactoring -->
+    <utility
+        component=".sections.workflow.WorkflowRefactorSection"
+        name="cisl.sections.workflow"
+        />
+
     <transmogrifier:registerConfig
         name="cisl.conteudo"
         title="Conteudo do site SoftwareLivre.gov.br"
