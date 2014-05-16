@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:transmogrifier="http://namespaces.plone.org/transmogrifier">
+
+    <include package="collective.transmogrifier" file="meta.zcml" />
+
+    <!-- Register content refactoring -->
+    <utility
+        component=".sections.refactor.RefactorSection"
+        name="cisl.sections.refactor"
+        />
+
+    <transmogrifier:registerConfig
+        name="cisl.conteudo"
+        title="Conteudo do site SoftwareLivre.gov.br"
+        configuration="conteudo.cfg"
+        />
+
+</configure>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="cisl.portal.policy"
+      interface="cisl.portal.policy.interfaces.IBrowserLayer"
+      />
+</layers>

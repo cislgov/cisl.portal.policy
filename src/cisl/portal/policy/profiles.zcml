@@ -1,0 +1,45 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="cisl.portal.policy">
+
+  <!-- Profiles -->
+  <genericsetup:registerProfile
+      name="default"
+      title="SoftwareLivre.gov.br: Configuração do Portal"
+      directory="profiles/default"
+      description="Instala e configura o SoftwareLivre.gov.br"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      i18n:attributes="title; description"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="SoftwareLivre.gov.br: Remoção do Pacote"
+      directory="profiles/uninstall"
+      description="Remove o pacote cisl.portal.policy de dentro de um portal Plone"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      i18n:attributes="title; description"
+      />
+
+  <genericsetup:registerProfile
+      name="initcontent"
+      title="SoftwareLivre.gov.br: Importação de conteúdo"
+      directory="profiles/initcontent"
+      description="Importa conteúdo do antigo SoftwareLivre.gov.br"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      i18n:attributes="title; description"
+      />
+
+  <!-- Upgrades -->
+  <include package=".upgrades" />
+
+  <!-- Oculta profile -->
+  <utility
+      factory=".config.HiddenProfiles"
+      name="cisl.portal.policy"
+      />
+
+</configure>
