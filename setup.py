@@ -39,6 +39,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'brasil.gov.portal',
+        'cisl.portal.casosdesucesso',
         'plone.api',
         'plone.app.upgrade',
         'Products.CMFPlone >=4.3',
