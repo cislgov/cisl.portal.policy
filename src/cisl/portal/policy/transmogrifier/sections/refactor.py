@@ -22,17 +22,28 @@ class RefactorSection(object):
             yield item
 
     def filter_contents(self, path):
-        allowed = ['/noticias', ]
+        allowed = ['/noticias/', ]
         for fragment in allowed:
             if fragment in path:
                 return True
         return False
+
+    def _news_item(self, item):
+        date = item['creation_date']
+        fragment = date[:8]
+        oid = item['_id']
+        item['_path'] = item['_path'].replace(
+            oid,
+            fragment + oid,
+        )
 
     def _fix_default_page(self, value):
         return str(value)
 
     def transmogrify(self, item):
         pt = item['_type']
+        if pt == 'News Item':
+            self._news_item(item)
         # Default page
         if pt not in ('Folder', 'Collection') and '_defaultpage' in item:
             del(item['_defaultpage'])
