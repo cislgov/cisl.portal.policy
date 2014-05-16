@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<object meta_type="Plone Properties Tool" name="portal_properties">
+  <object meta_type="Plone Property Sheet" name="brasil_gov">
+    <property name="title">Configurações de sites governamentais</property>
+    <property name="local" type="boolean">False</property>
+    <property name="social_networks" type="lines">
+      <element value="twitter|CISLGovBR"/>
+      <element value="facebook|cislgovbr"/>
+      <element value="youtube|CISLGov"/>
+    </property>
+  </object>
+  <object meta_type="Plone Property Sheet" name="sc_social_likes_properties">
+    <property name="title"/>
+    <property name="enabled_portal_types" type="lines">
+      <element value="Audio"/>
+      <element value="collective.cover.content"/>
+      <element value="collective.nitf.content"/>
+      <element value="collective.polls.poll"/>
+      <element value="Document"/>
+      <element value="Event"/>
+      <element value="Image"/>
+      <element value="sc.embedder"/>
+    </property>
+    <property name="typebutton" type="string">horizontal</property>
+    <property name="twittvia" type="string"></property>
+    <property name="fbaction" type="string"/>
+    <property name="fbadmins" type="string"/>
+    <property name="fbapp_id" type="string"/>
+    <property name="plugins_enabled" type="lines">
+      <element value="Facebook"/>
+      <element value="Twitter"/>
+      <element value="Google+"/>
+    </property>
+  </object>
+</object>
